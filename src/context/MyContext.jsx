@@ -23,9 +23,12 @@ const ContextProvider = ({ children }) => {
         console.log("error in parsing tasking in localstorage", error);
         return [];
       }
-      return [];
     }
+    return [];
   });
+
+  console.log(allTasks);
+  
 
   const todoTask = allTasks.filter((t) => t.status === "Todo");
   const progressTask = allTasks.filter((t) => t.status === "In Progress");
@@ -100,7 +103,7 @@ const getDueDate = (dueDate)=>{
 
     const due = new Date(dueDate)
     due.setHours(0,0,0,0)
-    
+
     if(today.getTime() === due.getTime){
         return "today"
     }
