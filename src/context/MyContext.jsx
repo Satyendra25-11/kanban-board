@@ -27,7 +27,7 @@ const ContextProvider = ({ children }) => {
     return [];
   });
 
-  console.log(allTasks);
+  c
   
 
   const todoTask = allTasks.filter((t) => t.status === "Todo");
